@@ -1,542 +1,94 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
     <head>
+	
         <!-- DEFAULT COLORS -->
         <meta name="color:Text" content="#000"/>
         <meta name="color:Highlight Color" content="#e73839"/>
         <meta name="color:Post Labels" content="#FFFFEA"/>
-        
         <!-- END DEFAULT COLORS -->
 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
         <title>Little Choice</title>
-        <link rel="icon" href="http://assets.tumblr.com/images/default_avatar_16.gif"/>
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="http://demo.tumblr.com/rss"/>
+
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8" />
         
         <!-- iPhone -->
         <meta name="viewport" content="width=920"/>
         <link rel="apple-touch-icon" href="http://assets.tumblr.com/images/default_avatar_128.gif"></link>
 
-        <style type="text/css">
-            body {
-                text-align: center;
-                margin-right: auto;
-                margin-left: auto;
-                background-color: #fff;
-                color: #000;
-            }
-
-            #header {
-                margin: 20px 20px 40px;
-                padding: 0px;
-                border-bottom-width: 1px;
-                border-bottom-style: solid;
-                border-bottom-color: #CCCCCC;
-            }
-
-                #header h1 {
-                    font-family: Georgia, "Times New Roman", Times, serif;
-                    font-size: 3em;
-                    font-weight: normal;
-                    text-align: center;
-                    margin: 0px;
-                    padding: 10px 10px 25px;
-                    color: #000;
-                    display: block;
-                    border-bottom-width: 1px;
-                    border-bottom-style: solid;
-                    border-bottom-color: #CCCCCC;
-                    letter-spacing: 0.1em;
-                }
-
-                #header ul {
-                    list-style-type: none;
-                    margin: 2px 0px;
-                    display: block;
-                    border-top-width: 1px;
-                    border-bottom-width: 1px;
-                    border-top-style: solid;
-                    border-bottom-style: solid;
-                    border-top-color: #666666;
-                    border-bottom-color: #666666;
-                    padding-top: 11px;
-                    padding-bottom: 11px;
-                }
-
-                    #header ul li {
-                        display: inline;
-                        margin: 2px 0px 1px;
-                    }
-
-                        #header ul li a {
-                            font-family: Georgia, "Times New Roman", Times, serif;
-                            font-size: 18px;
-                            color: #000;
-                            padding-top: 10px;
-                            padding-bottom: 10px;
-                            text-decoration: none;
-                            font-weight: normal;
-                            padding-right: 6%;
-                            padding-left: 6%;
-                            text-transform: uppercase;
-                            line-height: 20px;
-                        }
-
-                            #header ul li a:hover {
-                                color: #FFFFFF;
-                                background-color: #e73839;
-                            }
-
-            #content {
-                margin-right: auto;
-                margin-left: auto;
-                text-align: center;
-                position: relative;
-                width: 54%;
-            }
-
-            div#leftsidebar {
-								background-color: #e73839;
-                position: absolute;
-                left: -39%;
-                top: 0px;
-                width: 38%;
-                margin: 0px;
-                padding: 10px 0px;
-            }
-
-								div#leftsidebar div#search {
-									text-align: center;
-								}
-
-									div#leftsidebar div#search input {
-										text-align: center;
-									}
-
-                div#leftsidebar div.description {
-                    color: #FFFFFF;
-                    padding: 10px;
-                    font-size: 75%;
-                    font-family: Georgia, "Times New Roman", Times, serif;
-                    text-align: left;
-                    line-height: 130%;
-                }
-
-                    div#leftsidebar div.description a {
-                        color: #FFFFFF;
-                        text-decoration: none;
-                        border-bottom-width: 1px;
-                        border-bottom-style: dotted;
-                        border-bottom-color: #FFFFFF;
-                    }
-
-                div#leftsidebar a img {
-                    border: 1px solid #F3F3F3;
-                    padding: 1px;
-                    background-color: #333333;
-                }
-
-                    div#leftsidebar a img:hover {
-                        border: 1px solid #333333;
-                        padding: 1px;
-                        background-color: #FFFFFF;
-                    }
-
-                div#leftsidebar p {
-                    margin-top: 5px;
-                    margin-right: 0px;
-                    margin-bottom: 5px;
-                    margin-left: 0px;
-                    text-align: center;
-                    font-size: 1.1em;
-                    line-height: 1.3em;
-                }
-
-                div#leftsidebar div.description ul {
-                    margin: 0px 10px 5px;
-                    padding: 0px;
-                    list-style-type: none;
-                    color: #999999;
-                }
-            
-                    div.description ul li {
-                        margin-top: 1px;
-                        margin-bottom: 1px;
-                    }
-
-                div#leftsidebar div.description a:hover {
-                    color: #FFFFFF;
-                    border-bottom-width: 1px;
-                    border-bottom-style: solid;
-                    border-bottom-color: #FFFFFF;
-                }
-
-                div#leftsidebar h3 {
-                    font-family: Georgia, "Times New Roman", Times, serif;
-                    font-size: 120%;
-                    padding: 0px;
-                    margin-top: 0px;
-                    margin-right: 0px;
-                    margin-bottom: 10px;
-                    margin-left: 0px;
-                    text-align: center;
-                    font-weight: bold;
-                    color: #FFFFFF;
-                }
-						
-						div#searchresultcount {
-							text-align: center;
-							margin: 10px 0 20px;
-						}
-
-            div.rightsidebar {
-                position: absolute;
-                right: -38%;
-                top: 0px;
-                font-size: 80%;
-                padding: 5px 10px;
-                width: 32%;
-                border-top-width: 1px;
-                border-bottom-width: 1px;
-                border-top-style: dotted;
-                border-bottom-style: dotted;
-                border-top-color: #666666;
-                border-bottom-color: #666666;
-                background-color: #FFFFEA;
-                text-transform: uppercase;
-            }
-
-                div.rightsidebar a {
-                    color: #e73839;
-                    text-decoration: none;
-                    font-weight: normal;
-                }
-
-                div.rightsidebar h4 {
-                    margin: 0px;
-                    font-size: 100%;
-                    text-align: left;
-                    font-family: "Times New Roman", Times, serif;
-                    padding: 0px;
-                    font-style: normal;
-                    color: #333333;
-                    font-weight: bold;
-                }
-
-                div.rightsidebar p {
-                    color: #666666;
-                    margin: 0px;
-                    padding: 0px;
-                    text-align: left;
-                    line-height: 140%;
-                    font-size: 90%;
-                }
-                
-            span.noborder a {
-                border: none !important;
-            }
-            
-            div.text,
-            div.photo,
-            div.link,
-            div.video,
-            div.audio,
-            div.conversation,
-            div.quote {
-                padding: 0px 30px 40px;
-                margin-bottom: 55px;
-                font-size: 1em;
-                font-family: Georgia, "Times New Roman", Times, serif;
-                position: relative;
-                background-image: url('/themes/12/separator.png');
-                background-repeat: no-repeat;
-                background-position: center bottom;
-                min-height: 160px;
-                line-height: 1.4em;
-            }
-
-                div.text a,
-                div.photo a,
-                div.link a,
-                div.video a,
-                div.audio a,
-                div.conversation a,
-                div.quote a {
-                    text-decoration: none;
-                    border-bottom-width: 1px;
-                    border-bottom-style: dotted;
-                    border-bottom-color: #e73839;
-                    color: #e73839;
-                }
-                
-                    div.text a:hover,
-                    div.photo a:hover,
-                    div.link a:hover,
-                    div.video a:hover,
-                    div.audio a:hover,
-                    div.conversation a:hover,
-                    div.quote a:hover {
-                        color: #000;
-                        text-decoration: none;
-                        border-bottom-width: 1px;
-                        border-bottom-style: solid;
-                        border-bottom-color: #e73839;
-                    }
-                    
-            div.text h2 {
-                text-align: center;
-                padding: 0px;
-                margin: 0px 0px 10px;
-                font-size: 200%;
-                font-style: normal;
-                font-family: Georgia, "Times New Roman", Times, serif;
-                color: #000;
-                font-weight: normal;
-                font-variant: small-caps;
-                letter-spacing: 0.1em;
-                text-transform: capitalize;
-            }
-            
-                div.link h2 a {
-                    font-family: Georgia, "Times New Roman", Times, serif;
-                    font-size: 80%;
-                    font-weight: bold;
-                    text-decoration: none;
-                    color: #e73839;
-                    border-bottom-width: 1px;
-                    border-bottom-style: dotted;
-                    border-bottom-color: #333333;
-                    text-transform: uppercase;
-                    line-height: 120%;
-                    letter-spacing: 0.1em;
-                }
-
-                    div.link h2 a:hover {
-                        text-decoration: none;
-                        border-bottom: 1px solid #e73839;
-                        color: #000;
-                    }
-                    
-            div.photo a img {
-                padding: 1px;
-                border: 1px solid #FFFFFF;
-                background-color: #333333;
-            }
-            
-                div.photo a img:hover {
-                    border: 1px solid #333333;
-                    background-color: #FFFFFF;
-                }
-
-            div.text ol, div.text ul {
-                margin: 10px;
-                font-family: Georgia, "Times New Roman", Times, serif;
-                font-size: 0.8em;
-                text-align: justify;
-            }
-
-            div.text blockquote,
-            div.photo blockquote,
-            div.link blockquote,
-            div.quote blockquote,
-            div.audio blockquote,
-            div.video blockquote {
-                font-style: italic;
-                text-align: justify;
-            }
-            
-            div.quote h3 {
-                font-family: "Times New Roman", Times, serif;
-                font-weight: normal;
-                font-style: italic;
-            }
-            
-            div.quote h3.long {
-                font-size: 135%;
-            }
-        
-            div.quote h3.medium {
-                font-size: 160%;
-                line-height: 100%;
-            }
-        
-            div.quote h3.short {
-                font-size: 185%;
-                line-height: 100%;
-            }
-        
-            div.conversation h2 {
-                text-align: center;
-                padding: 0px;
-                margin: 0px 0px 10px;
-                font-size: 160%;
-                font-style: normal;
-                font-family: Georgia, "Times New Roman", Times, serif;
-                color: #000;
-                font-weight: normal;
-                font-variant: small-caps;
-                letter-spacing: 0.1em;
-                text-transform: capitalize;
-            }
-            
-            div.conversation ul {
-                font-size: 1em;
-                list-style-type: none;
-            }
-            
-            div.conversation li {
-                text-align: left;
-            }
-            
-                div.conversation li span.label {
-                    font-weight: bold;
-                }
-                
-            img.sx {
-                float: left;
-                margin-right: 5px;
-            }
-        
-            div.navigation span {
-                margin-right: 10px;
-                margin-left: 10px;
-                font-size: 1em;
-            }
-            
-            div.navigation p span a {
-                padding: 5px;
-                background-color: #e73839;
-                color: #FFFFFF;
-                font-weight: bold;
-                text-decoration: none;
-            }
-            
-                div.navigation p span a:hover {
-                    background-color: #000;
-                }
-                
-            #footer {
-                padding-top: 20px;
-                border-top-width: 1px;
-                border-top-style: solid;
-                border-top-color: #333333;
-                font-size: 80%;
-                margin: 30px 20px;
-            }
-            
-                #footer span {
-                    margin-right: 10em;
-                    margin-left: 10em;
-                }
-                
-                #footer a {
-                    color: #e73839;
-                    text-decoration: none;
-                }
-            
-						.query { font-weight: bold; }
-
-            
-        </style>
     </head>
-    <body>
-        <!-- Header -->
-        <div id="header">
-            <h1>Little Choice</h1>
 
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/mobile">Mobile</a></li>
-                <li><a href="http://demo.tumblr.com/rss">RSS</a></li>
-                <li><a href="/archive">Archive</a></li>
-                <li><a href="/random">Random</a></li>
-            </ul>
-        </div>
+    <body>
+	
+	
+	
+        <!-- Header -->
+		<h1>Little Choice</h1>
+		<p id="description">Documentation</p>
+   
 
 
         <!-- Content -->
         <div id="content">
+	
 	  				
-            <!-- Post -->
             
-                
-                  
-                    
-                
-                    
-                
-                    <div class="quote">
-                        <h3 class="short">&#8220 It does not matter how slow you go so long as you do not stop. &#8221;</h3>
-                        
-                        <p>Wisdom of <a href="http://en.wikipedia.org/wiki/Confucius">Confucius</a></p>
-                        
-                        <div class="rightsidebar">
-                            <h4>Nov 8 2006</h4>
-                            
-                            <p><a href="http://demo.tumblr.com/post/236/it-does-not-matter-how-slow-you-go-so-long-as-you">Quote</a></p>
-                        </div>
-                    </div>
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            
-                
-                  
-                    
-                
-                    <div class="photo">
-                        <span class="noborder"><img src="http://19.media.tumblr.com/235_r4_400.jpg"
-                        alt="Passing through Times Square by&nbsp;Mareen Fischinger"/></span>
-                        
-                            <p>Passing through Times Square by <a href="http://www.mareenfischinger.com/">Mareen Fischinger</a></p>
-                        
 
-                        <div class="rightsidebar">
-                            
-                            <h4>14:26</h4>
-                            <p><a href="http://demo.tumblr.com/post/235/passing-through-times-square-by-mareen-fischinger">Photo</a></p>
-                        </div>
-                    </div>
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            
-                
-                  
-                    
-                
-                    
-                
-                    
-                
-                    <div class="link">
-                        <h2><a href="http://" class="link" >My favorite web site</a></h2>
+			<!-- Post -->                
+			<div class="quote post">
+				
+			    <h3>"It does not matter how slow you go so long as you do not stop."</h3>
+    
+			    <p>Wisdom of <a href="http://en.wikipedia.org/wiki/Confucius">Confucius</a></p>
 
-                        
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                        
-                        
-                        <div class="rightsidebar">
-                            
-                            <h4>14:25</h4>
-                            <p><a href="http://demo.tumblr.com/post/234/my-favorite-web-site">Link</a></p>
-                        </div>
-                    </div>
+				<div class="permalink">
+					<p class="date"><a href="#">1234739581</a></p>
+				</div>
+				
+			</div>
+                
+                    
+                
+                    
+                
+                    
+                               
+			<div class="photo post">
+				
+			    <img src="http://19.media.tumblr.com/235_r4_400.jpg"
+			    alt="Passing through Times Square by&nbsp;Mareen Fischinger"/>
+    
+			    <p>Passing through Times Square by <a href="http://www.mareenfischinger.com/">Mareen Fischinger</a></p>
+    
+				<div class="permalink">
+					<p class="date"><a href="#">1234734381</a></p>
+				</div>
+
+			</div>
+                
+                    
+                
+                    
+                
+                    
+
+                
+			<div class="link post">
+
+			    <h2><a href="http://">My favorite web site</a></h2>
+    
+			    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+        
+				<div class="permalink">
+					<p class="date"><a href="#">1250734381</a></p>
+				</div>
+			</div>
                 
                     
                 
@@ -544,65 +96,40 @@
                 
                     
                 
-            
-                
-                  
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    <div class="conversation">
-                        
+			<div class="conversation post">
 
-                        <ul>
-                            
-                                <li>
-                                    <span class="label">Jack:</span>
-                                    Hey, you know what sucks?
-
-                                </li>
-                            
-                                <li>
-                                    <span class="label">Lindsey:</span>
-                                    vaccuums
-
-                                </li>
-                            
-                                <li>
-                                    <span class="label">Jack:</span>
-                                    Hey, you know what sucks in a metaphorical sense?
-
-                                </li>
-                            
-                                <li>
-                                    <span class="label">Lindsey:</span>
-                                    black holes
-
-                                </li>
-                            
-                                <li>
-                                    <span class="label">Jack:</span>
-                                    Hey, you know what just isn&#039;t cool?
-
-                                </li>
-                            
-                                <li>
-                                    <span class="label">Lindsey:</span>
-                                    lava?
-                                </li>
-                            
-                        </ul>
-
-                        <div class="rightsidebar">
-                            
-                            <h4>14:24</h4>
-                            <p><a href="http://demo.tumblr.com/post/233/jack-hey-you-know-what-sucks-lindsey">Conversation</a></p>
-                        </div>
-                    </div>
+				<ul>
+					<li class=" member1">
+						<span class="label">Jack:</span>
+						Hey, you know what sucks?
+					</li>
+					<li>
+						<span class="label">Lindsey:</span>
+						vaccuums
+					</li>
+					<li class=" member1">
+						<span class="label">Jack:</span>
+						Hey, you know what sucks in a metaphorical sense?
+					</li>
+					<li>
+						<span class="label">Lindsey:</span>
+						black holes
+					</li>
+					<li class=" member1">
+						<span class="label">Jack:</span>
+						Hey, you know what just isn&#039;t cool?
+					</li>
+					<li>
+						<span class="label">Lindsey:</span>
+						lava?
+					</li>
+				</ul>
+				
+				<div class="permalink">
+					<p class="date"><a href="#">1050734381</a></p>
+				</div>
+				
+			</div>
                 
                     
                 
@@ -610,23 +137,37 @@
                 
             
                    
-                    <div class="text">
-                        <h2>An example post</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetuer <a href="http:///">adipiscing elit</a>. Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. Aliquam mattis porta urna. Maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. Aenean id massa ut lacus molestie porta. Curabitur sit amet quam id libero suscipit venenatis.</p>
-<ul>
-<li>Lorem ipsum dolor sit amet.</li>
-<li>Consectetuer adipiscing elit. </li>
-<li>Nam at tortor quis ipsum tempor aliquet.</li>
-</ul>
-<p>Cum sociis <a href="http:///">natoque penatibus</a> et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse sed ligula. Sed volutpat odio non turpis gravida luctus. Praesent elit pede, iaculis facilisis, vehicula mattis, tempus non, arcu.</p>
-<blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;">Donec placerat mauris commodo dolor. Nulla tincidunt. Nulla vitae augue.</blockquote>
-<p>Suspendisse ac pede. Cras <a href="http:///">tincidunt pretium</a> felis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque porttitor mi id felis. Maecenas nec augue. Praesent a quam pretium leo congue accumsan.</p>
-                        <div class="rightsidebar">
-                            
-                            <h4>14:22</h4>
-                            <p><a href="http://demo.tumblr.com/post/232/an-example-post">Text</a></p>
-                        </div>
-                    </div>
+			<div class="text post">
+				
+				<h2>An example post</h2>
+				
+				<p>	Lorem ipsum dolor sit amet, consectetuer <a href="http:///">adipiscing elit</a>. 
+					Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. Aliquam mattis 
+					porta urna. Maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. Aenean 
+					id massa ut lacus molestie porta. Curabitur sit amet quam id libero suscipit venenatis.</p>
+					
+				<ul>
+					<li>Lorem ipsum dolor sit amet.</li>
+					<li>Consectetuer adipiscing elit. </li>
+					<li>Nam at tortor quis ipsum tempor aliquet.</li>
+				</ul>
+				
+				<p>	Cum sociis <a href="http:///">natoque penatibus</a> et magnis dis parturient montes, 
+					nascetur ridiculus mus. Suspendisse sed ligula. Sed volutpat odio non turpis gravida 
+					luctus. Praesent elit pede, iaculis facilisis, vehicula mattis, tempus non, arcu.</p>
+					
+				<blockquote>Donec placerat mauris commodo dolor. Nulla tincidunt. Nulla vitae augue.</blockquote>
+				
+				<p>	Suspendisse ac pede. Cras <a href="http:///">tincidunt pretium</a> felis. Cum sociis 
+					natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque 
+					porttitor mi id felis. Maecenas nec augue. Praesent a quam pretium leo congue accumsan.</p>
+					
+
+				<div class="permalink">
+					<p class="date"><a href="#">1050790381</a></p>
+				</div>
+
+			</div>
                 
                   
                     
@@ -634,46 +175,44 @@
                     
                 
                     
-                
-                    
-                
-                    
-                
-                    
-                
-            
-
              
-                <div class="navigation">
-                    <p>
-                        
-                        
-                    </p>
-                </div>
+			<div id="navigation">
+   
+				<!--{block:PreviousPage}-->
+                	<a href="{PreviousPage}" id="nav-prev">&larr; Previous</a>
+	            <!--{/block:PreviousPage}-->
+
+	            <!--{block:NextPage}-->
+	                <a href="{NextPage}" id="nav-next">Next &rarr;</a>
+	            <!--{/block:NextPage}-->
+
+			</div>
+			
+			
+			
+			
+	
+			<!-- Footer -->
+			<div id="footer">
+
+				<form action="/search" method="get" id="searchform">
+					<p><input type="search" name="q" value="" results="5" /></p>
+				</form>
+
+				<p id="attribution">
+					<a href="http://www.tumblr.com">Tumblr</a> powered. 
+					<a href="http://github.com/jimwhimpey/downpour/tree/master">Downpour</a> by 
+					<a href="http://valhallaisland.com">Jim</a>.
+				</p>
+			
+			</div>
+			
+			
             
 
-            <!-- Left Sidebar -->
-            <div id="leftsidebar">
-								<div id="search">
-									<form action="/search" method="get">
-									    <input type="text" name="q" value=""/><br/>
-									    <input type="submit" value="Search"/>
-									</form>
-								</div>
-	
-                <div class="description">
-                    <h3>About me</h3>
-                    <p>Life Documentation.</p>
-                </div>
-            </div>
+     
         </div>
-
-        <!-- Footer -->
-        <div id="footer">
-            <label>
-                <span><a href="http://www.tumblr.com">Tumblr</a> powered</span>
-                <span><a href="http://www.sid05.com">Sid05</a> templated</span>
-            </label>
-        </div>
+      
     </body>
+
 </html>
