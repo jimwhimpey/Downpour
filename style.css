@@ -33,14 +33,18 @@
 		HEADER
 	++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 	
-	h1 {
-		color: #FF84C7;
+	#header {
+		margin: 0 0 7em 0;
 		}
-		
-		#description {
-			color: #FF8A8A;
-			margin: 0 0 7em 0;
+	
+		h1 {
+			color: #FF84C7;
 			}
+		
+			#description {
+				color: #FF8A8A;
+				margin: 0 0 7em 0;
+				}
 		
 		
 		

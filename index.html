@@ -4,23 +4,26 @@
 
     <head>
 	
-        <!-- DEFAULT COLORS -->
         <meta name="color:Text" content="#000"/>
         <meta name="color:Highlight Color" content="#e73839"/>
         <meta name="color:Post Labels" content="#FFFFEA"/>
-        <!-- END DEFAULT COLORS -->
 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-        <title>Little Choice</title>
+        <title>{Title}</title>
 
         <link rel="shortcut icon" href="{Favicon}">
         <link rel="alternate" type="application/rss+xml" href="{RSS}">
 		<link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8" />
         
-        <!-- iPhone -->
         <meta name="viewport" content="width=920"/>
         <link rel="apple-touch-icon" href="http://assets.tumblr.com/images/default_avatar_128.gif"></link>
+
+		<style type="text/css" media="screen">
+			
+			{CustomCSS}
+			
+		</style>
 
     </head>
 
@@ -28,163 +31,158 @@
 	
 	
 	
-        <!-- Header -->
-		<h1>Little Choice</h1>
-		<p id="description">Documentation</p>
-   
+		<div id="header">
+			<h1>{Title}</h1>
+			{block:Description}
+	            <p id="description">{Description}</p>
+	        {/block:Description}
+   		</div>
 
 
-        <!-- Content -->
+
+
         <div id="content">
-	
 	  				
-            
-
-			<!-- Post -->                
-			<div class="quote post">
+	
+            {block:Posts}
+	
 				
-			    <h3>"It does not matter how slow you go so long as you do not stop."</h3>
-    
-			    <p>Wisdom of <a href="http://en.wikipedia.org/wiki/Confucius">Confucius</a></p>
-
-				<div class="permalink">
-					<p class="date"><a href="#">1234739581</a></p>
-				</div>
+				{block:Quote}
 				
-			</div>
-                
-                    
-                
-                    
-                
-                    
-                               
-			<div class="photo post">
+					<div class="quote post">
 				
-			    <img src="http://19.media.tumblr.com/235_r4_400.jpg"
-			    alt="Passing through Times Square by&nbsp;Mareen Fischinger"/>
-    
-			    <p>Passing through Times Square by <a href="http://www.mareenfischinger.com/">Mareen Fischinger</a></p>
-    
-				<div class="permalink">
-					<p class="date"><a href="#">1234734381</a></p>
-				</div>
+					    <h3>"{Quote}"</h3>
+					
+						{block:Source}
+                            <p>{Source}</p>
+                        {/block:Source}
 
-			</div>
+						<div class="permalink">
+							<p class="date"><a href="{Permalink}">{Timestamp}</a></p>
+						</div>
+				
+					</div>
+				
+				{/block:Quote}
                 
-                    
-                
-                    
-                
-                    
-
-                
-			<div class="link post">
-
-			    <h2><a href="http://">My favorite web site</a></h2>
+				
+				{block:Photo}
+				
+					<div class="photo post">
+				
+					    <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+					
+						{block:Caption}
+                            <p>{Caption}</p>
+                        {/block:Caption}
     
-			    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+						<div class="permalink">
+							<p class="date"><a href="{Permalink}">{Timestamp}</a></p>
+						</div>
+
+					</div>
+                
+                {/block:Photo}
+
+
+ 				{block:Video}
+				
+					<div class="video post">
+				
+						{Video-500}
+					
+						{block:Caption}
+                            <p>{Caption}</p>
+                        {/block:Caption}
+    
+						<div class="permalink">
+							<p class="date"><a href="{Permalink}">{Timestamp}</a></p>
+						</div>
+
+					</div>
+                
+                {/block:Video}   
+                
+                
+				{block:Link}
+
+					<div class="link post">
+
+					    <h2><a href="{URL}" {Target}>{Name}</a></h2>
+    
+						{block:Description}
+                            <p>{Description}</p>
+                        {/block:Description}
         
-				<div class="permalink">
-					<p class="date"><a href="#">1250734381</a></p>
-				</div>
-			</div>
+						<div class="permalink">
+							<p class="date"><a href="{Permalink}">{Timestamp}</a></p>
+						</div>
+					</div>
+				
+				{/block:Link}
                 
-                    
-                
-                    
-                
-                    
-                
-			<div class="conversation post">
 
-				<ul>
-					<li class=" member1">
-						<span class="label">Jack:</span>
-						Hey, you know what sucks?
-					</li>
-					<li>
-						<span class="label">Lindsey:</span>
-						vaccuums
-					</li>
-					<li class=" member1">
-						<span class="label">Jack:</span>
-						Hey, you know what sucks in a metaphorical sense?
-					</li>
-					<li>
-						<span class="label">Lindsey:</span>
-						black holes
-					</li>
-					<li class=" member1">
-						<span class="label">Jack:</span>
-						Hey, you know what just isn&#039;t cool?
-					</li>
-					<li>
-						<span class="label">Lindsey:</span>
-						lava?
-					</li>
-				</ul>
+				{block:Chat}
+                
+					<div class="conversation post">
+						
+						{block:Title}
+                            <h3><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}
+
+						<ul>
+							{block:Lines}
+								<li class="member{UserNumber}">
+									{block:Label}
+                                        <span class="label">{Label}</span>
+                                    {/block:Label}
+									{Line}
+								</li>
+							{/block:Lines}
+						</ul>
 				
-				<div class="permalink">
-					<p class="date"><a href="#">1050734381</a></p>
-				</div>
+						<div class="permalink">
+							<p class="date"><a href="{Permalink}">{Timestamp}</a></p>
+						</div>
 				
-			</div>
+					</div>
+					
+				{/block:Chat}
                 
                     
-                
-                    
-                
-            
+                {block:Text}
+
+                    <div class="text post">
+	
+                        {block:Title}
+                            <h3>{Title}</h3>
+                        {/block:Title}
+
+                        {Body}
+
+						<div class="permalink">
+							<p class="date"><a href="{Permalink}">{Timestamp}</a></p>
+						</div>
+
+                    </div>
+
+                {/block:Text}
                    
-			<div class="text post">
-				
-				<h2>An example post</h2>
-				
-				<p>	Lorem ipsum dolor sit amet, consectetuer <a href="http:///">adipiscing elit</a>. 
-					Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. Aliquam mattis 
-					porta urna. Maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. Aenean 
-					id massa ut lacus molestie porta. Curabitur sit amet quam id libero suscipit venenatis.</p>
-					
-				<ul>
-					<li>Lorem ipsum dolor sit amet.</li>
-					<li>Consectetuer adipiscing elit. </li>
-					<li>Nam at tortor quis ipsum tempor aliquet.</li>
-				</ul>
-				
-				<p>	Cum sociis <a href="http:///">natoque penatibus</a> et magnis dis parturient montes, 
-					nascetur ridiculus mus. Suspendisse sed ligula. Sed volutpat odio non turpis gravida 
-					luctus. Praesent elit pede, iaculis facilisis, vehicula mattis, tempus non, arcu.</p>
-					
-				<blockquote>Donec placerat mauris commodo dolor. Nulla tincidunt. Nulla vitae augue.</blockquote>
-				
-				<p>	Suspendisse ac pede. Cras <a href="http:///">tincidunt pretium</a> felis. Cum sociis 
-					natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque 
-					porttitor mi id felis. Maecenas nec augue. Praesent a quam pretium leo congue accumsan.</p>
-					
 
-				<div class="permalink">
-					<p class="date"><a href="#">1050790381</a></p>
-				</div>
+			{/block:Posts}
+				
 
-			</div>
-                
-                  
-                    
-                
-                    
-                
-                    
-             
+
+
 			<div id="navigation">
    
-				<!--{block:PreviousPage}-->
+				{block:PreviousPage}
                 	<a href="{PreviousPage}" id="nav-prev">&larr; Previous</a>
-	            <!--{/block:PreviousPage}-->
+	            {/block:PreviousPage}
 
-	            <!--{block:NextPage}-->
+	            {block:NextPage}
 	                <a href="{NextPage}" id="nav-next">Next &rarr;</a>
-	            <!--{/block:NextPage}-->
+	            {/block:NextPage}
 
 			</div>
 			
