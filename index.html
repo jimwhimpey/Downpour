@@ -170,6 +170,21 @@
                     </div>
 
                 {/block:Text}
+
+
+				{block:Audio}
+					
+					{AudioPlayerGrey}
+					
+					{block:Caption}
+						<p>{Caption}</p>
+					{/block:Caption}
+					
+					{block:ExternalAudio}
+						<p><a href="{ExternalAudioURL}">Download</a></p>
+					{/block:ExternalAudio}
+				
+				{/block:Audio}
                    
 
 			{/block:Posts}

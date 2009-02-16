@@ -42,7 +42,7 @@
 			}
 		
 			#description {
-				color: #FF8A8A;
+				color: #FF979A;
 				margin: 0 0 7em 0;
 				}
 		
@@ -90,7 +90,7 @@
 		PHOTO
 	++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 	
-	.photo img, .photo a img, .video embed {
+	.photo img, .photo a img, .video object {
 		border: 1px solid #8DA1BD;
 		}
 		
@@ -98,7 +98,7 @@
 			border: 1px solid #FFF;
 			}
 		
-	.photo p, .video p {
+	.photo p, .video p, .audio p {
 		color: #304156;
 		}
 		
@@ -134,7 +134,7 @@
 		margin: 0 0 1.5em 0;
 		}
 		
-	.text p {
+	.text p, .audio p {
 		margin: 0 0 1.5em 0;
 		}
 		
@@ -149,6 +149,8 @@
 		list-style-type: square;
 		margin: 0 0 1.5em 2.5em;
 		}
+	
+	
 		
 		
 		
