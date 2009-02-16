@@ -11,19 +11,23 @@
 		BODY, WRAPPINGS, ANCHORS, anything sitewide
 	++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 	
-	body {
-		font-family: Monaco, Consolas, Courier, monospace;
-		font-size: 1em;
-		line-height: 1.8em;
-		color: #8DA1BD;
-		background: #141721;
-		padding: 60px;
-		width: 45em;
+	html {
+		font-size: 13px;
 		}
+	
+		body {
+			font-family: Monaco, Consolas, Courier, monospace;
+			font-size: 1em;
+			line-height: 1.8em;
+			color: #8DA1BD;
+			background: #141721;
+			padding: 60px;
+			width: 45em;
+			}
 		
-		a { color: #AEF23C; text-decoration: none; }
+			a { color: #AEF23C; text-decoration: none; }
 		
-			a:hover { color: #FBD329; }
+				a:hover { color: #FBD329; }
 				
 				
 			
