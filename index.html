@@ -3,10 +3,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
     <head>
-	
-        <meta name="color:Text" content="#000"/>
-        <meta name="color:Highlight Color" content="#e73839"/>
-        <meta name="color:Post Labels" content="#FFFFEA"/>
 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
@@ -20,9 +16,44 @@
         <meta name="viewport" content="width=920"/>
         <link rel="apple-touch-icon" href="http://assets.tumblr.com/images/default_avatar_128.gif"></link>
 
+		<!-- DEFAULT COLORS -->
+        <meta name="color:Background" content="#141721"/>
+		<meta name="color:Text" content="#8DA1BD"/>
+		<meta name="color:Links" content="#AEF23C"/>
+		<meta name="color:Links Hover" content="#FBD329"/>
+		<meta name="color:Heading" content="#FF84C7"/>
+		<meta name="color:Heading Hover" content="#FBD329"/>
+		<meta name="color:Description" content="#D34C75"/>
+		<meta name="color:Permalink" content="#597C1D"/>
+		<meta name="color:Permalink Hover" content="#FBD329"/>
+		<meta name="color:Permalink Background" content="#292D49"/>
+		<meta name="color:Text Alt" content="#304156"/>
+
 		<style type="text/css" media="screen">
 			
 			{CustomCSS}
+			
+			body {
+				background: {color:Background};
+				color: {color:Text};
+				}
+			
+				a { color: {color:Links}; }
+			
+					a:hover { color: {color:Links Hover}; }
+
+			#header h1 a { color: {color:Heading}; }
+			
+				#header h1 a:hover { color: {color:Heading Hover}; }
+				
+			#description { color: {color:Description}; }
+			
+			.permalink a { background: {color:Permalink Background}; color: {color:Permalink}; }		
+				
+				.permalink a:hover { color: {color:Permalink Hover}; }
+				
+			#footer, .quote p, .photo p, .video p, .audio p, #content .conversation, .text blockquote { color: {color:Text Alt}; }
+
 			
 		</style>
 

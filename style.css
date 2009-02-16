@@ -86,7 +86,7 @@
 		QUOTE
 	++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */		
 		
-	.quote p {
+	.quote p, .photo p, .video p, .audio p, #content .conversation, .text blockquote, #footer {
 		color: #304156;
 		}
 			
@@ -105,10 +105,6 @@
 			border: 1px solid #FFF;
 			}
 		
-	.photo p, .video p, .audio p {
-		color: #304156;
-		}
-		
 		
 		
 		
@@ -118,7 +114,6 @@
 	
 	#content .conversation {
 		line-height: 2em;
-		color: #304156;
 		}
 	
 		.member1 {
@@ -149,7 +144,6 @@
 		margin: 0 0 1.5em 1.5em;
 		padding: 0 0 0 1.5em;
 		border-left: 1px solid #304156;
-		color: #304156;
 		}
 	
 	.text ul {
@@ -180,7 +174,6 @@
 	
 	#footer {
 		margin: 0 0 7em 0;
-		color: #304156;
 		}
 		
 		#searchform {
