@@ -174,15 +174,19 @@
 
 				{block:Audio}
 					
-					{AudioPlayerGrey}
+					<div class="post audio">
 					
-					{block:Caption}
-						<p>{Caption}</p>
-					{/block:Caption}
+						{AudioPlayerGrey}
 					
-					{block:ExternalAudio}
-						<p><a href="{ExternalAudioURL}">Download</a></p>
-					{/block:ExternalAudio}
+						{block:Caption}
+							<p>{Caption}</p>
+						{/block:Caption}
+					
+						{block:ExternalAudio}
+							<p><a href="{ExternalAudioURL}">Download</a></p>
+						{/block:ExternalAudio}
+						
+					</div>
 				
 				{/block:Audio}
                    
