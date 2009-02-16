@@ -14,7 +14,8 @@
 
         <link rel="shortcut icon" href="{Favicon}">
         <link rel="alternate" type="application/rss+xml" href="{RSS}">
-		<link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8" />
+		<link rel="stylesheet" href="http://misc.jimwhimpey.com/tumblr/downpour/reset.css" type="text/css" media="screen" charset="utf-8" />
+		<link rel="stylesheet" href="http://misc.jimwhimpey.com/tumblr/downpour/style.css" type="text/css" media="screen" charset="utf-8" />
         
         <meta name="viewport" content="width=920"/>
         <link rel="apple-touch-icon" href="http://assets.tumblr.com/images/default_avatar_128.gif"></link>
@@ -51,7 +52,7 @@
 				
 					<div class="quote post">
 				
-					    <h3>"{Quote}"</h3>
+					    <h2>"{Quote}"</h2>
 					
 						{block:Source}
                             <p>{Source}</p>
@@ -69,8 +70,10 @@
 				{block:Photo}
 				
 					<div class="photo post">
-				
-					    <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+						
+						{LinkOpenTag}
+					    	<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+						{LinkCloseTag}
 					
 						{block:Caption}
                             <p>{Caption}</p>
@@ -127,7 +130,7 @@
 					<div class="conversation post">
 						
 						{block:Title}
-                            <h3><a href="{Permalink}">{Title}</a></h3>
+                            <h2>{Title}</h2>
                         {/block:Title}
 
 						<ul>
@@ -155,7 +158,7 @@
                     <div class="text post">
 	
                         {block:Title}
-                            <h3>{Title}</h3>
+                            <h2>{Title}</h2>
                         {/block:Title}
 
                         {Body}
@@ -174,18 +177,33 @@
 
 
 
-			<div id="navigation">
+			{block:Pagination}
+
+				<div id="navigation">
    
-				{block:PreviousPage}
-                	<a href="{PreviousPage}" id="nav-prev">&larr; Previous</a>
-	            {/block:PreviousPage}
+					{block:PreviousPage}
+	                	<a href="{PreviousPage}" id="nav-prev">&larr; Previous</a>
+		            {/block:PreviousPage}
 
-	            {block:NextPage}
-	                <a href="{NextPage}" id="nav-next">Next &rarr;</a>
-	            {/block:NextPage}
+		            {block:NextPage}
+		                <a href="{NextPage}" id="nav-next">Next &rarr;</a>
+		            {/block:NextPage}
+		
+					{block:PermalinkPagination}
+					
+						{block:PreviousPost}
+		                	<a href="{PreviousPost}" id="nav-prev">&larr; Previous</a>
+			            {/block:PreviousPost}
 
-			</div>
-			
+			            {block:NextPost}
+			                <a href="{NextPost}" id="nav-next">Next &rarr;</a>
+			            {/block:NextPost}
+					
+					{/block:PermalinkPagination}
+
+				</div>
+
+			 {/block:Pagination}
 			
 			
 			

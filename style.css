@@ -90,11 +90,15 @@
 		PHOTO
 	++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 	
-	.photo img {
+	.photo img, .photo a img, .video embed {
 		border: 1px solid #8DA1BD;
 		}
 		
-	.photo p {
+		.photo a:hover img {
+			border: 1px solid #FFF;
+			}
+		
+	.photo p, .video p {
 		color: #304156;
 		}
 		
@@ -125,7 +129,7 @@
 		TEXT
 	++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 	
-	.text h2 {
+	.text h2, .conversation h2 {
 		color: #fff;
 		margin: 0 0 1.5em 0;
 		}
