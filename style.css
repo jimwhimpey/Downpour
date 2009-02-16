@@ -41,9 +41,11 @@
 		margin: 0 0 7em 0;
 		}
 	
-		h1 {
+		#header h1 a {
 			color: #FF84C7;
 			}
+			
+			#header h1 a:hover { color: #FBD329; }
 		
 			#description {
 				color: #FF979A;

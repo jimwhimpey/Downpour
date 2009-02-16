@@ -33,7 +33,7 @@
 	
 	
 		<div id="header">
-			<h1>{Title}</h1>
+			<h1><a href="/">{Title}</a></h1>
 			{block:Description}
 	            <p id="description">{Description}</p>
 	        {/block:Description}
@@ -207,22 +207,26 @@
 		            {block:NextPage}
 		                <a href="{NextPage}" id="nav-next">Next &rarr;</a>
 		            {/block:NextPage}
-		
-					{block:PermalinkPagination}
-					
-						{block:PreviousPost}
-		                	<a href="{PreviousPost}" id="nav-prev">&larr; Previous</a>
-			            {/block:PreviousPost}
-
-			            {block:NextPost}
-			                <a href="{NextPost}" id="nav-next">Next &rarr;</a>
-			            {/block:NextPost}
-					
-					{/block:PermalinkPagination}
 
 				</div>
 
 			 {/block:Pagination}
+			
+			{block:PermalinkPagination}
+				
+				<div id="navigation">
+					
+					{block:PreviousPost}
+	                	<a href="{PreviousPost}" id="nav-prev">&larr; Previous</a>
+		            {/block:PreviousPost}
+
+		            {block:NextPost}
+		                <a href="{NextPost}" id="nav-next">Next &rarr;</a>
+		            {/block:NextPost}
+	
+				</div>
+			
+			{/block:PermalinkPagination}
 			
 			
 			
