@@ -146,10 +146,19 @@
 		border-left: 1px solid #304156;
 		}
 	
-	.text ul {
+	ul {
 		list-style-type: square;
 		margin: 0 0 1.5em 2.5em;
 		}
+		
+	ol {
+		list-style-type: decimal;
+		margin: 0 0 1.5em 2.5em;
+		}
+		
+	strong { color: white; }
+	
+	em { color: white; font-style: italic; }
 	
 	
 		
