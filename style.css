@@ -52,6 +52,14 @@
 				margin: 0 0 7em 0;
 				}
 				
+				#description a {
+					color: #822B46;
+					}
+					
+					#description a:hover {
+						color: #fff;
+						}
+				
 		
 		
 		
